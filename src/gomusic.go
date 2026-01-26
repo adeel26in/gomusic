@@ -52,7 +52,5 @@ func main() {
 	switch os.Args[1] {
 	case "help", "--help", "-h":
 		help()
-	default:
-		unknowncommand()
 	}
 }
