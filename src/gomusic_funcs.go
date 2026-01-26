@@ -30,7 +30,7 @@ func wavplayer(args string) {
 
 	defer streamer.Close()
 
-	speaker.Init(format.SampleRate, format.SampleRate.N(time.Second/10))
+	speaker.Init(format.SampleRate, format.SampleRate.N(200*time.Millisecond))
 
 	done := make(chan bool)
 	speaker.Play(beep.Seq(streamer, beep.Callback(func() {
@@ -57,7 +57,7 @@ func mp3player(args string) {
 
 	defer streamer.Close()
 
-	speaker.Init(format.SampleRate, format.SampleRate.N(time.Second/10))
+	speaker.Init(format.SampleRate, format.SampleRate.N(200*time.Millisecond))
 
 	done := make(chan bool)
 	speaker.Play(beep.Seq(streamer, beep.Callback(func() {
@@ -84,7 +84,7 @@ func flacplayer(args string) {
 
 	defer streamer.Close()
 
-	speaker.Init(format.SampleRate, format.SampleRate.N(time.Second/10))
+	speaker.Init(format.SampleRate, format.SampleRate.N(200*time.Millisecond))
 
 	done := make(chan bool)
 	speaker.Play(beep.Seq(streamer, beep.Callback(func() {
@@ -111,7 +111,7 @@ func oggplayer(args string) {
 
 	defer streamer.Close()
 
-	speaker.Init(format.SampleRate, format.SampleRate.N(time.Second/10))
+	speaker.Init(format.SampleRate, format.SampleRate.N(200*time.Millisecond))
 
 	done := make(chan bool)
 	speaker.Play(beep.Seq(streamer, beep.Callback(func() {
